@@ -1,7 +1,7 @@
 # Generador de exámenes
 _Para generar todos los exámenes que necesites a partir de una base de preguntas en un archivo Excel o escribiéndolas a mano._
 
-### El proyecto surgio a raíz del siguiente tweet:
+### El proyecto surgió a raíz del siguiente tweet:
 <a href="https://twitter.com/Tia_MaGui/status/1781833877612318753" target="_blank">
   <img src="https://github.com/juanCarrique/generador-examenes/assets/102698445/de117a3b-dc06-494a-a347-f01554889191" alt="tweet" width="500"/>
 </a>
