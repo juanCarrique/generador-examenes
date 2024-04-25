@@ -1,6 +1,11 @@
 # Generador de exámenes
 _Para generar todos los exámenes que necesites a partir de una base de preguntas en un archivo Excel o escribiéndolas a mano._
 
+### A Raíz del siguiente tweet:
+<a href="https://twitter.com/Tia_MaGui/status/1781833877612318753" target="_blank">
+  <img src="https://github.com/juanCarrique/generador-examenes/assets/102698445/de117a3b-dc06-494a-a347-f01554889191" alt="tweet" width="500"/>
+</a>
+
 ### ¡Subi un archivo Excel!
 ![image](https://github.com/juanCarrique/generador-examenes/assets/102698445/89d2e938-d209-46fc-8054-b6457c8f2a3d)
 > 🚨 Los archivos excel deben poseer el siguiente formato:  
@@ -27,3 +32,6 @@ Una vez que hayas elegido la cantidad de exámenes que se quieren generen, la ca
 ### Notas
 * Por ahora el orden de las respuestas se mezcla una sola vez, por lo cual, si la misma pregunta aparece en dos exámenes distintos, el orden de sus respuestas, serán iguales.
 * _Claramente_ se podría mejorar la parte estética de la aplicación.
+
+
+[image]:https://github.com/juanCarrique/generador-examenes/assets/102698445/de117a3b-dc06-494a-a347-f01554889191
