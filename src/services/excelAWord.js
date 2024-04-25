@@ -1,23 +1,28 @@
 import readXlsxFile from 'read-excel-file'
-import { preguntasAWord } from './preguntasAWord'
 
 export function excelAWord(cantExam, cantPregPorExam, excel){
+    return new Promise((resolve, reject) => {
+        var preguntas = []
 
-    var preguntas = []
-
-    readXlsxFile(excel).then((rows) => {
-        rows.forEach((row, pregIndex) => {
-            row.forEach((cell, cellIdex) => {
-                if (cellIdex === 0){
-                    preguntas = [...preguntas, { pregunta: cell, respuestas: [] }]
-                } else {
-                    if (cell !== null && cell !== undefined && cell !== ""){
-                        preguntas[pregIndex].respuestas.push(cell)
-                    }
-                }
-            })
+        readXlsxFile(excel).then((rows) => {
+            if (rows.length < cantPregPorExam) {
+                resolve(false)
+            } else {
+                rows.forEach((row, pregIndex) => {
+                    row.forEach((cell, cellIdex) => {
+                        if (cellIdex === 0){
+                            preguntas = [...preguntas, { pregunta: cell, respuestas: [] }]
+                        } else {
+                            if (cell !== null && cell !== undefined && cell !== ""){
+                                preguntas[pregIndex].respuestas.push(cell)
+                            }
+                        }
+                    })
+                })
+                resolve(preguntas)
+            }
+        }).catch(error => {
+            reject(error)
         })
-        preguntasAWord(cantExam, cantPregPorExam, preguntas)
     })
-
 }

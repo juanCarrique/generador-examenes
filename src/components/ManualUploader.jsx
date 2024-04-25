@@ -43,4 +43,4 @@ const ManualUploader = () => {
       )
 }
 
-export default ManualUploader;
+export default ManualUploader

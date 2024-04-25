@@ -1,8 +1,8 @@
-import { useExcel } from "../hooks/useExcel";
-import Button from '@mui/joy/Button';
-import SvgIcon from '@mui/joy/SvgIcon';
-import { styled } from '@mui/joy';
-import { useEffect } from "react";
+import { useExcel } from "../hooks/useExcel"
+import Button from '@mui/joy/Button'
+import SvgIcon from '@mui/joy/SvgIcon'
+import { styled } from '@mui/joy'
+import { useEffect } from "react"
 
 const VisuallyHiddenInput = styled('input')`
   clip: rect(0 0 0 0);
@@ -14,7 +14,7 @@ const VisuallyHiddenInput = styled('input')`
   left: 0;
   white-space: nowrap;
   width: 1px;
-`;
+`
 
 function InputFileUpload({ handleFileChange }) {
   return (
@@ -45,7 +45,7 @@ function InputFileUpload({ handleFileChange }) {
       Subir archivo
       <VisuallyHiddenInput type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" onChange={handleFileChange} />
     </Button>
-  );
+  )
 }
 
 const ExcelUploader = () => {
@@ -70,4 +70,4 @@ const ExcelUploader = () => {
     )
 }
 
-export default ExcelUploader;
+export default ExcelUploader

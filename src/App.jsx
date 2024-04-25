@@ -61,7 +61,7 @@ function App() {
     setCantPregPorExam(event.target.value)
   }
   
-  const generarExamenes = () => {
+  const generarExamenes = async () => {
 
     if (opcionElegida === 'manual') {
       if(preguntasOk()) {
@@ -69,7 +69,16 @@ function App() {
       }
     }
     else if (opcionElegida === 'excel') {
-      excelAWord(cantExam, cantPregPorExam, excel)
+      try {
+        const result = await excelAWord(cantExam, cantPregPorExam, excel)
+        if (!result) {
+          alert("El archivo no tiene suficientes preguntas")
+        } else {
+          preguntasAWord(cantExam, cantPregPorExam, result)
+        }
+      } catch (error) {
+        console.error("Error al procesar el archivo Excel:", error)
+      }
     }
     
   }

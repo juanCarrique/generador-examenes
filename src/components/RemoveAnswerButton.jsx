@@ -1,4 +1,4 @@
-import { IconBxTrashAlt } from "./Icons";
+import { IconBxTrashAlt } from "./Icons"
 
 export function RemoveAnswerButton({ index, remover, respuestaIndex}) {
     return (
